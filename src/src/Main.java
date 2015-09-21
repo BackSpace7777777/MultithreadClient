@@ -17,6 +17,7 @@ public class Main {
             BufferedReader inFromServer = new BufferedReader(new InputStreamReader(s.getInputStream()));
             outToServer.write(new byte[]{'H','e','l','l','o','\n'});
             System.out.println(inFromServer.readLine());
+            s.close();
         } catch (IOException ex) {System.out.println(ex);}
     }
     
