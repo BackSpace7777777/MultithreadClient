@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args){
         try
         {
-            Socket s=new Socket("localhost",666);
+            Socket s=new Socket("localhost",25565);
             DataOutputStream outToServer = new DataOutputStream(s.getOutputStream());   
             BufferedReader inFromServer = new BufferedReader(new InputStreamReader(s.getInputStream()));
             outToServer.write(new byte[]{'H','e','l','l','o','\n'});
